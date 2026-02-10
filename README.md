@@ -1,73 +1,120 @@
-# React + TypeScript + Vite
+# 👨Armando Carrillo – Software Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Desarrollador de Software Multiplataforma con experiencia en aplicaciones web, móviles y backend.
+Apasionado por crear soluciones eficientes, escalables y centradas en el usuario.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Sobre mí
 
-## React Compiler
+Soy desarrollador de software con formación en Desarrollo de Software Multiplataforma y experiencia
+en frontend, backend y aplicaciones móviles. Me especializo en construir aplicaciones modernas,
+bien estructuradas y siguiendo buenas prácticas de arquitectura y diseño.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Me adapto rápido a nuevas tecnologías, trabajo bien en equipo y disfruto resolver problemas complejos.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologías
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Lenguajes
+- JavaScript
+- TypeScript
+- C#
+- PHP
+- Python
+- Kotlin
+- SQL
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Frontend
+- React
+- Next.js
+- Angular
+- HTML5
+- CSS3 / SCSS
+- Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Backend
+- .NET Web API
+- Laravel
+- Node.js
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Mobile
+- Android (Kotlin)
+- Xamarin
+- React Native
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Bases de datos
+- MySQL
+- SQL Server
+- MongoDB
+- Room (Android)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Herramientas y otros
+- Git & GitHub
+- REST APIs
+- MVC / MVVM
+- IoT
+- UX/UI básico
+
+---
+
+## 📂 Proyectos Destacados
+
+### 🕒 RemindWatch
+Aplicación Android multiplataforma para la gestión de recordatorios en móvil, reloj y TV.
+
+**Tecnologías:** Kotlin, Room, MVVM, RecyclerView  
+🔗 Repositorio: https://github.com/tuusuario/remindwatch
+
+---
+
+### 🛒 Ecommerce de Perfumes
+Plataforma web para la gestión y venta de productos con autenticación de usuarios.
+
+**Tecnologías:** React, Next.js, MongoDB, NextAuth  
+🔗 Repositorio: https://github.com/tuusuario/ecommerce-perfumes
+
+---
+
+### 🌐 Sistema Web Fullstack
+Aplicación web con frontend en Angular y backend en .NET Web API, implementando CRUD completo.
+
+**Tecnologías:** Angular, .NET, SQL Server  
+🔗 Repositorio: https://github.com/tuusuario/sistema-fullstack
+
+---
+
+## Formación
+
+**Desarrollo de Software Multiplataforma**  
+Universidad Tecnológica de Nayarit  
+Octavo cuatrimestre
+
+---
+
+## Experiencia
+
+**Prácticas Profesionales – Universidad de Guadalajara**  
+Desarrollo de aplicación multiplataforma con integración IoT para monitoreo ambiental.
+
+---
+
+## Soft Skills
+
+- Trabajo en equipo
+- Aprendizaje autodidacta
+- Resolución de problemas
+- Responsabilidad y compromiso
+- Comunicación efectiva
+
+---
+
+## 📫 Contacto
+
+- 📧 Email: baruccarrillo@outlook.com  
+- 💼 LinkedIn: https://linkedin.com/in/armando-baruc-carrillo-gutiérrez-498a84319/ 
+- 🐙 GitHub: https://github.com/BarucCarrillo
+
+---
+
