@@ -1,0 +1,22 @@
+@mixin adapted-content {
+    @media (max-width: 1700px) {
+        @content;
+    }
+}
+
+@mixin adapted-content-mobile {
+    @media (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin adapted-content-xl {
+    @media (min-width: 1699px) {
+        @content;
+    }
+}
+@mixin adapted-content-web {
+    @media (min-width: 750px) {
+        @content;
+    }
+}

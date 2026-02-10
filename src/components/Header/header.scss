@@ -1,0 +1,45 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.section-header {
+    background-color: colors.$bg_1_color;
+    color: colors.$white;
+
+    .conatiner-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: fonts.px_to_vw(20) fonts.px_to_vw(90);
+    }
+
+    .right-content {
+        display: flex;
+        gap: fonts.px_to_vw(24);
+        align-items: center;
+        @include fonts.family-Raleway-Regular;
+
+        .txt-head {
+            @include var.adapted_content_web {
+                font-size: fonts.px_to_vw(26);
+                letter-spacing: fonts.px_to_vw(2);
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -4px;
+                    width: 0;
+                    height: 2px;
+                    background-color: currentColor;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
