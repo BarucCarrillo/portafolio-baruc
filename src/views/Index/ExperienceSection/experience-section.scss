@@ -1,0 +1,52 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.section-experience-section {
+    background-color: colors.$bg_1_color;
+
+    @include var.adapted-content-web {
+        padding: fonts.px_to_vw(100);
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+    }
+
+    .head-container {
+        color: colors.$white;
+
+        @include var.adapted-content-mobile {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+
+        .title {
+            @include fonts.family-NotoSans-Condensed-Bold;
+
+            @include var.adapted-content-web {
+                font-size: fonts.px_to_vw(36);
+            }
+
+            @include var.adapted-content-mobile {
+                font-size: fonts.px_to_vw(32, 2);
+            }
+        }
+
+        .subtitle {
+            @include fonts.family-NotoSans-Condensed-Regular;
+
+            @include var.adapted-content-web {
+                font-size: fonts.px_to_vw(32);
+            }
+
+            @include var.adapted-content-mobile {
+                font-size: fonts.px_to_vw(28, 2);
+            }
+        }
+    }
+
+}

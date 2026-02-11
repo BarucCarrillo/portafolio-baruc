@@ -1,8 +1,11 @@
+import { Banner } from "../../components/Banner/Banner";
+import { ExperienceSection } from "./ExperienceSection/ExperienceSection";
 
 export const Index = () => {
     return(
         <section className=''>
-            <h1>HOLAA</h1>
+            <Banner />
+            <ExperienceSection />
         </section>
     );
 }

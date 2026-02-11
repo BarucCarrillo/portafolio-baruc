@@ -5,41 +5,117 @@
 .section-header {
     background-color: colors.$bg_1_color;
     color: colors.$white;
+    position: relative;
 
     .conatiner-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: fonts.px_to_vw(20) fonts.px_to_vw(90);
-    }
+        padding: fonts.px_to_vw(20) fonts.px_to_vw(100);
 
-    .right-content {
-        display: flex;
-        gap: fonts.px_to_vw(24);
-        align-items: center;
-        @include fonts.family-Raleway-Regular;
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: fonts.px_to_vw(5, 2);
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 100;
 
-        .txt-head {
-            @include var.adapted_content_web {
-                font-size: fonts.px_to_vw(26);
-                letter-spacing: fonts.px_to_vw(2);
-                position: relative;
+            span {
+                display: block;
+                width: fonts.px_to_vw(25, 2);
+                height: fonts.px_to_vw(3, 2);
+                background-color: colors.$white;
+                transition: 0.3s;
+            }
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: -4px;
-                    width: 0;
-                    height: 2px;
-                    background-color: currentColor;
-                    transition: width 0.3s ease;
+            &.open {
+                span:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
                 }
 
-                &:hover::after {
-                    width: 100%;
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                span:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
                 }
             }
+        }
+
+        .left-content{
+            .logo-header{
+                border-radius: fonts.px_to_vw(12);
+                width: fonts.px_to_vw(80);
+                height: fonts.px_to_vw(80);
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+        }
+
+        // --- ESTILOS CONTENIDO DERECHO ---
+        .right-content {
+            display: flex;
+            gap: fonts.px_to_vw(24);
+            align-items: center;
+            @include fonts.family-Raleway-Regular;
+
+            &.mobile {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 50%;
+                height: 100vh;
+
+                background-color: colors.$bg_1_color;
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 0;
+
+                transition: right 0.4s ease-in-out;
+                box-shadow: fonts.px_to_vw(-2, 2) 0 fonts.px_to_vw(5, 2) rgba(0, 0, 0, 0.5);
+                z-index: 90;
+
+                &.nav-open {
+                    right: 0;
+                }
+            }
+
+            .txt-head {
+                color: inherit;
+                text-decoration: none;
+
+                @include var.adapted_content_web {
+                    font-size: fonts.px_to_vw(26);
+                    letter-spacing: fonts.px_to_vw(2);
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: fonts.px_to_vw(-4);
+                        width: 0;
+                        height: fonts.px_to_vw(2);
+                        background-color: currentColor;
+                        transition: width 0.3s ease;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+
+                @include var.adapted_content_mobile {
+                    font-size: fonts.px_to_vw(26, 2);
+                    letter-spacing: fonts.px_to_vw(2);
+                    position: relative;
+                    margin: fonts.px_to_vw(10, 2) 0;
+                }
+            }
+
         }
     }
 }
