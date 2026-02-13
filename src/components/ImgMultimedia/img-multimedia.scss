@@ -1,0 +1,12 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.section-img-multimedia{
+    display: flex;
+    justify-content: center;
+    .img{
+        margin: 2%;
+        box-shadow: fonts.px_to_vw(10) fonts.px_to_vw(10) fonts.px_to_vw(10) rgba(0, 0, 0, 0.3);
+    }
+}
