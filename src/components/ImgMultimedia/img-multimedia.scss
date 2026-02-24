@@ -2,11 +2,23 @@
 @use "/src/styles/fonts.scss" as fonts;
 @use "/src/styles/colors.scss" as colors;
 
-.section-img-multimedia{
+.section-img-multimedia {
     display: flex;
     justify-content: center;
-    .img{
+
+    @include var.adapted-content-mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img {
         margin: 2%;
         box-shadow: fonts.px_to_vw(10) fonts.px_to_vw(10) fonts.px_to_vw(10) rgba(0, 0, 0, 0.3);
+
+        @include var.adapted-content-mobile {
+            width: fonts.px_to_vw(1500);
+            margin-top: fonts.px_to_vw(200);
+        }
     }
+
 }

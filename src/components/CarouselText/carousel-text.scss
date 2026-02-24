@@ -1,39 +1,64 @@
 @use "/src/styles/variables.scss" as var;
 @use "/src/styles/colors.scss" as colors;
+@use "/src/styles/fonts.scss" as fonts;
 
 .section-carousel-text {
-    width: 100%;
-    height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: center;
+    @include fonts.family-NotoSans-Condensed-Bold;
 
-    .carousel-track {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 2rem;
-        padding: 0 5vw;
-        width: max-content;
-    }
+    @include var.adapted-content-web {
+  
+        .carousel-track {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 2rem;
+            padding: 0 5vw;
+            width: max-content;
+        }
 
-    .carousel-card {
-        min-width: 400px;
-        height: 300px;
-        background: #f0f0f0;
-        border-radius: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #333;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        .carousel-card {
+            min-width: fonts.px_to_vw(400);
+            height: fonts.px_to_vw(300);
+            background: #f5f5f5;
+            border-radius: fonts.px_to_vw(12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:fonts.px_to_vw(42);
+            box-shadow: 0 fonts.px_to_vw(10) fonts.px_to_vw(30) rgba(0, 0, 0, 0.2);
 
-        transition: transform 0.3s ease;
+            transition: transform 0.3s ease;
 
-        &:hover {
-            transform: scale(1.05);
-            background: colors.$white;
+            &:hover {
+                transform: scale(1.05);
+                background: colors.$white;
+            }
         }
     }
+
+    @include var.adapted-content-mobile {
+
+        .carousel-track {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 2rem;
+            padding: 0 5vw;
+            width: max-content;
+        }
+
+        .carousel-card {
+            min-width: fonts.px_to_vw(400, 2);
+            height: fonts.px_to_vw(200, 2);
+            background: #f0f0f0;
+            border-radius: fonts.px_to_vw(36);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: fonts.px_to_vw(42, 2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+    }
+
 }
