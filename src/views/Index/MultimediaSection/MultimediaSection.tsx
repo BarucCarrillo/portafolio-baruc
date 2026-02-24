@@ -1,4 +1,3 @@
-import './multimedia-section.scss'
 import { CarouselText } from "../../../components/CarouselText/CarouselText";
 import { ImgMultimedia } from "../../../components/ImgMultimedia/ImgMultimedia";
 

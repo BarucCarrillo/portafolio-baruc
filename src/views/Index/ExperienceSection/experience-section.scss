@@ -3,7 +3,6 @@
 @use "/src/styles/colors.scss" as colors;
 
 .section-experience-section {
-    background-color: colors.$bg_1_color;
 
     @include var.adapted-content-web {
         padding: fonts.px_to_vw(100);

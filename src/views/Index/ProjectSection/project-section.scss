@@ -1,0 +1,16 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.project-section{
+    .project-section-title{
+        text-align: center;
+        color: colors.$white;
+        @include fonts.family-Raleway-Bold;
+
+        @include var.adapted-content-web{
+            margin: 5%;
+            font-size: fonts.px_to_vw(42);
+        }
+    }
+}

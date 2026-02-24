@@ -30,7 +30,7 @@ export const useCarouselText = () => {
                     start: "center center",
                     end: `+=${amountToScroll}`,
                     pin: true,
-                    //scrub: 1,
+                    scrub: 1,
                     invalidateOnRefresh: true,
                     markers: true
                 }
