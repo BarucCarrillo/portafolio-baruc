@@ -1,0 +1,18 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.index-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    width: 100%;
+
+    .index-title-container {
+        text-align: center;
+        @include fonts.family-Saira-Thin;
+        letter-spacing: fonts.px_to_vw(10);
+        font-size: fonts.px_to_vw(50);
+    }
+}

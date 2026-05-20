@@ -1,76 +1,43 @@
 
 @font-face {
-    font-family: "Montserrat Bold";
-    src: url("/fonts/Montserrat-Bold.ttf") format("opentype");
+    font-family: "Saira Bold";
+    src: url("/fonts/Saira-Bold.ttf") format("opentype");
 }
-@mixin family-Montserrat-Bold {
-    font-family: "Montserrat Bold";
-}
-
-@font-face {
-    font-family: "Montserrat Italic";
-    src: url("/fonts/Montserrat-Italic.ttf") format("opentype");
-}
-@mixin family-Montserrat-Italic {
-    font-family: "Montserrat Italic";
+@mixin family-Saira-Bold {
+    font-family: "Saira Bold";
 }
 
 @font-face {
-    font-family: "Montserrat Regular";
-    src: url("/fonts/Montserrat-Regular.ttf") format("opentype");
+    font-family: "Saira SemiBold";
+    src: url("/fonts/Saira-Bold.ttf") format("opentype");
 }
-@mixin family-Montserrat-Regular {
-    font-family: "Montserrat Regular";
-}
-
-@font-face {
-    font-family: "NotoSans Condensed Bold";
-    src: url("/fonts/NotoSans_Condensed-Bold.ttf") format("opentype");
-}
-@mixin family-NotoSans-Condensed-Bold {
-    font-family: "NotoSans Condensed Bold";
+@mixin family-Saira-Bold {
+    font-family: "Saira Bold";
 }
 
 @font-face {
-    font-family: "NotoSans Condensed Italic";
-    src: url("/fonts/NotoSans_Condensed-Italic.ttf") format("opentype");
+    font-family: "Saira Medium";
+    src: url("/fonts/Saira-Medium.ttf") format("opentype");
 }
-@mixin family-NotoSans-Condensed-Italic {
-    font-family: "NotoSans Condensed Italic";
-}
-
-@font-face {
-    font-family: "NotoSans Condensed Regular";
-    src: url("/fonts/NotoSans_Condensed-Regular.ttf") format("opentype");
-}
-@mixin family-NotoSans-Condensed-Regular {
-    font-family: "NotoSans Condensed Regular";
+@mixin family-Saira-Medium {
+    font-family: "Saira Mediun";
 }
 
 @font-face {
-    font-family: "Raleway Bold";
-    src: url("/fonts/Raleway-Bold.ttf") format("opentype");
+    font-family: "Saira Regular";
+    src: url("/fonts/Saira-Regular.ttf") format("opentype");
 }
-@mixin family-Raleway-Bold {
-    font-family: "Raleway Bold";
-}
-
-@font-face {
-    font-family: "Raleway Italic";
-    src: url("/fonts/Raleway-Italic.ttf") format("opentype");
-}
-@mixin family-Raleway-Italic {
-    font-family: "Raleway Italic";
+@mixin family-Saira-Regular {
+    font-family: "Saira Regular";
 }
 
 @font-face {
-    font-family: "Raleway Regular";
-    src: url("/fonts/Raleway-Regular.ttf") format("opentype");
+    font-family: "Saira Thin";
+    src: url("/fonts/Saira-Thin.ttf") format("opentype");
 }
-@mixin family-Raleway-Regular {
-    font-family: "Raleway Regular";
+@mixin family-Saira-Thin {
+    font-family: "Saira Thin";
 }
-
 
 $screenToXD_web: 1920;
 $screenToXD_mobile: 393;
