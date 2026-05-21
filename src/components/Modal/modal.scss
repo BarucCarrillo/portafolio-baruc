@@ -1,0 +1,114 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: fonts.px_to_vw(20);
+
+    @include var.adapted-content-mobile {
+        padding: fonts.px_to_vw(0, 2); 
+    }
+}
+
+.modal-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: fonts.px_to_vw(500);
+    border-radius: fonts.px_to_vw(12);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: modalScaleUp 0.2s ease-out;
+    border: fonts.px_to_vw(3) solid #2a2b2e;
+
+    @include var.adapted-content-mobile {
+        max-width: 90%; 
+        border-radius: fonts.px_to_vw(12, 2);
+        border-width: fonts.px_to_vw(2, 2); 
+    }
+}
+
+.modal-header {
+    border-bottom: fonts.px_to_vw(3) solid #2a2b2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: fonts.px_to_vw(16) fonts.px_to_vw(24);
+    background-color: #818563;
+
+    @include var.adapted-content-mobile {
+        border-bottom-width: fonts.px_to_vw(2, 2);
+        padding: fonts.px_to_vw(12, 2) fonts.px_to_vw(16, 2); 
+    }
+
+    .modal-title {
+        margin: 0;
+        font-size: 1.25rem; 
+        font-weight: 600;
+        color: #e3e3e1;
+        @include fonts.family-Saira-Medium;
+        letter-spacing: fonts.px_to_vw(3);
+
+        @include var.adapted-content-mobile {
+            font-size: 1.1rem;
+            letter-spacing: fonts.px_to_vw(2, 2);
+        }
+    }
+
+    .modal-close-btn {
+        background: #d74747;
+        border: fonts.px_to_vw(1) solid white;
+        padding: fonts.px_to_vw(4);
+        border-radius: fonts.px_to_vw(6);
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include var.adapted-content-mobile {
+            border-width: fonts.px_to_vw(1, 2);
+            padding: fonts.px_to_vw(6, 2);
+            border-radius: fonts.px_to_vw(4, 2);
+        }
+    }
+}
+
+.modal-content {
+    padding: fonts.px_to_vw(24);
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-height: 70vh;
+    overflow-y: auto;
+
+    @include var.adapted-content-mobile {
+        padding: fonts.px_to_vw(16, 2);
+        font-size: 0.95rem;
+    }
+}
+
+@keyframes modalScaleUp {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
