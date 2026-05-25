@@ -1,0 +1,55 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.section-profile-modal {
+    display: flex;
+    align-items: center;
+    gap: fonts.px_to_vw(50);
+    padding: fonts.px_to_vw(10);
+    overflow: hidden;
+
+    @include var.adapted-content-mobile {
+        flex-direction: column;
+    }
+
+    .left-content-profile {
+        img {
+            border-radius: 50%;
+
+            @include var.adapted-content-mobile {
+                max-width: fonts.px_to_vw(200, 2);
+            }
+        }
+    }
+
+    .right-content-profile {
+        width: 100%;
+        max-width: fonts.px_to_vw(500);
+
+        @include var.adapted-content-mobile {
+            max-width: fonts.px_to_vw(500, 2);
+        }
+
+        p {
+            @include fonts.family-Saira-Regular;
+            font-size: fonts.px_to_vw(22);
+
+            @include var.adapted-content-mobile {
+                font-size: fonts.px_to_vw(18, 2);
+            }
+        }
+
+        h2 {
+            @include fonts.family-Saira-Bold;
+            font-size: fonts.px_to_vw(34);
+            color: #eb7e17;
+            letter-spacing: fonts.px_to_vw(4);
+
+            @include var.adapted-content-mobile {
+                font-size: fonts.px_to_vw(32, 2);
+                letter-spacing: fonts.px_to_vw(4, 2);
+            }
+        }
+    }
+}

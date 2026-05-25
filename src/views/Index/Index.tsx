@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Modal } from '../../components/Modal/Modal';
 import { folder_icon } from '../../data/img-data';
 import './index.scss'
+import { ProfileModal } from '../../components/ProfileModal/ProfileModal';
 
 export const Index = () => {
 
@@ -58,9 +59,7 @@ export const Index = () => {
                 onClose={() => setIsOpenProfile(false)}
                 title='C:\BARUC\profile'
                 children={
-                    <>
-                        <h1>hola</h1>
-                    </>
+                    <ProfileModal/>
                 }
             />
 
