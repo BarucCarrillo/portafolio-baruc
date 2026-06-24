@@ -1,0 +1,34 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.development-section {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  width: 100%;                    
+  gap: fonts.px-to-vw(20);                      
+  margin-top: fonts.px-to-vw(40);                      
+
+  .img-project {
+    flex-shrink: 0;              
+    img {
+      border-radius: fonts.px-to-vw(90);
+      display: block;             
+    }
+  }
+
+  .info-project {
+    color: black;
+    flex-grow: 1;                 
+    
+    h2 {
+      @include fonts.family-Saira-Bold;
+      letter-spacing: fonts.px-to-vw(2);        
+    }
+    p {
+      @include fonts.family-Saira-Medium;
+      margin: 0;
+    }
+  }
+}

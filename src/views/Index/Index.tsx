@@ -3,6 +3,7 @@ import { Modal } from '../../components/Modal/Modal';
 import { folder_icon } from '../../data/img-data';
 import './index.scss'
 import { ProfileModal } from '../../components/ProfileModal/ProfileModal';
+import { WorksModal } from '../../components/WorksModal/WorksModal';
 
 export const Index = () => {
 
@@ -68,9 +69,7 @@ export const Index = () => {
                 onClose={() => setIsOpenWorks(false)}
                 title='C:\BARUC\works'
                 children={
-                    <>
-                        <h1>hola</h1>
-                    </>
+                    <WorksModal/>
                 }
             />
 

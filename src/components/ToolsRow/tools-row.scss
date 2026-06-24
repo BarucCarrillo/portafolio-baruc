@@ -1,0 +1,53 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.tools-row {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: fonts.px_to_vw(80);
+      margin-top: fonts.px_to_vw(60);
+      margin-bottom: fonts.px_to_vw(60);
+    }
+
+    .frameworks-row {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: fonts.px_to_vw(180);
+      margin-top: fonts.px_to_vw(60);
+      margin-bottom: fonts.px_to_vw(60);
+    }
+    
+    .develop-tools-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .develop-tools-logo {
+        width: fonts.px_to_vw(130);
+        height: fonts.px_to_vw(130);
+    }
+    
+    .develop-tools-title {
+        color: black;
+        @include fonts.family-Saira-Medium;
+        font-size: fonts.px_to_vw(42);
+        margin-top: fonts.px_to_vw(20);
+    }
+
+    .develop-tools-logo svg {
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }

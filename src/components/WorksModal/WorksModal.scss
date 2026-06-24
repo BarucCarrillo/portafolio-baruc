@@ -2,4 +2,14 @@
 @use "/src/styles/fonts.scss" as fonts;
 @use "/src/styles/colors.scss" as colors;
 
-.section-works-modal{}
+.section-works-modal {
+  .develop-tools {
+    h2 {
+      color: black;
+      text-align: center;
+      @include fonts.family-Saira-Bold;
+      font-size: fonts.px_to_vw(64);
+      margin-top: fonts.px_to_vw(30);
+    }
+  }
+}
