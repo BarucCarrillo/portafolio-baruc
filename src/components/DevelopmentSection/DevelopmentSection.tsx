@@ -1,3 +1,4 @@
+import { Animator } from '../Animator';
 import './DevelopmentSection.scss';
 
 interface DevelopmentSectionProps {
@@ -10,9 +11,9 @@ interface DevelopmentSectionProps {
 export const DevelopmentSection = ({url, img, title, description}: DevelopmentSectionProps) => {
     return(
         <div className='development-section'>
-            <div className="img-project">
+            <Animator className="img-project" delay={2}>
                 <img src={img} alt="" />
-            </div>
+            </Animator>
             <div className="info-project">
                 <h2><a href={url} target='blank'>{title}</a></h2>
                 <p>{description}</p>

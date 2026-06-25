@@ -30,7 +30,7 @@ export const WorksModal = () => {
           className="frameworks-row"
         />
       </div>
-      <div className="development-section">
+      <div className="development-container">
         <DevelopmentSection
           img={projects.barre.img}
           title={projects.barre.title}

@@ -12,4 +12,8 @@
       margin-top: fonts.px_to_vw(30);
     }
   }
+  .development-container{
+    display: flex;
+    flex-direction: column;
+  }
 }
