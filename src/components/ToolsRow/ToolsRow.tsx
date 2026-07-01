@@ -1,3 +1,4 @@
+import { Animator } from "../Animator";
 import "./tools-row.scss";
 
 type Tool = {
@@ -15,8 +16,10 @@ type ToolsRowProps = {
 export const ToolsRow = ({ title, tools, className = "tools-row" }: ToolsRowProps) => {
   return (
     <>
-      <h2 className="tools-section-title">{title}</h2>
-      <div className={className}>
+      <Animator animation="scaleUp" delay={0.5}>
+        <h2 className="tools-section-title">{title}</h2>
+      </Animator>
+      <Animator className={className} animation="slideUp" delay={0.5}>
         {tools.map(({ logo, title, variant }) => {
           const svg = variant ? logo.variants?.[variant] ?? logo.svg : logo.svg;
 
@@ -30,7 +33,7 @@ export const ToolsRow = ({ title, tools, className = "tools-row" }: ToolsRowProp
             </div>
           );
         })}
-      </div>
+      </Animator>
     </>
   );
 };

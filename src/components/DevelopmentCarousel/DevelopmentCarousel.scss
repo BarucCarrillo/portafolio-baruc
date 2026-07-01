@@ -1,0 +1,103 @@
+@use "/src/styles/variables.scss" as var;
+@use "/src/styles/fonts.scss" as fonts;
+@use "/src/styles/colors.scss" as colors;
+
+.carousel {
+  width: 100%;
+
+  &__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    touch-action: pan-y;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: fonts.px_to_vw(30);
+    margin-top: fonts.px_to_vw(40);
+
+    @include var.adapted-content-mobile {
+      gap: fonts.px_to_vw(20, 2);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fonts.px_to_vw(40);
+    height: fonts.px_to_vw(40);
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: fonts.px_to_vw(18);
+    transition:
+      opacity 0.2s,
+      transform 0.15s;
+    flex-shrink: 0;
+
+    @include var.adapted-content-mobile {
+      width: fonts.px_to_vw(44, 2);
+      height: fonts.px_to_vw(44, 2);
+      font-size: fonts.px_to_vw(20, 2);
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      transform: scale(0.93);
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    gap: fonts.px_to_vw(10);
+
+    @include var.adapted-content-mobile {
+      gap: fonts.px_to_vw(10, 2);
+    }
+  }
+
+  &__dot {
+    width: fonts.px_to_vw(9);
+    height: fonts.px_to_vw(9);
+    border-radius: 50%;
+    border: none;
+    background: currentColor;
+    opacity: 0.25;
+    cursor: pointer;
+    padding: 0;
+    transition:
+      opacity 0.2s,
+      transform 0.2s;
+
+    @include var.adapted-content-mobile {
+      width: fonts.px_to_vw(10, 2);
+      height: fonts.px_to_vw(10, 2);
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &--active {
+      opacity: 1;
+      transform: scale(1.35);
+    }
+  }
+}

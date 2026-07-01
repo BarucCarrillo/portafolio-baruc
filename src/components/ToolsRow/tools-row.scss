@@ -3,51 +3,59 @@
 @use "/src/styles/colors.scss" as colors;
 
 .tools-row {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: fonts.px_to_vw(80);
-      margin-top: fonts.px_to_vw(60);
-      margin-bottom: fonts.px_to_vw(60);
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: fonts.px_to_vw(100);
+  width: 80%;
+  margin: 0 auto;
+  margin-top: fonts.px_to_vw(70);
+  margin-bottom: fonts.px_to_vw(70);
 
-    .frameworks-row {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: fonts.px_to_vw(180);
-      margin-top: fonts.px_to_vw(60);
-      margin-bottom: fonts.px_to_vw(60);
-    }
-    
-    .develop-tools-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
+  @include var.adapted-content-mobile {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap: fonts.px_to_vw(50, 2);
+    margin-top: fonts.px_to_vw(40, 2);
+    margin-bottom: fonts.px_to_vw(40, 2);
+  }
+}
 
-    .develop-tools-logo {
-        width: fonts.px_to_vw(130);
-        height: fonts.px_to_vw(130);
-    }
-    
-    .develop-tools-title {
-        color: black;
-        @include fonts.family-Saira-Medium;
-        font-size: fonts.px_to_vw(42);
-        margin-top: fonts.px_to_vw(20);
-    }
+.develop-tools-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 
-    .develop-tools-logo svg {
-      width: 100%;
-      height: 100%;
+.develop-tools-logo {
+  width: fonts.px_to_vw(80);
+  height: fonts.px_to_vw(80);
 
-      &:hover {
-        transform: scale(1.3);
-      }
-    }
+  @include var.adapted-content-mobile {
+    width: fonts.px_to_vw(60, 2);
+    height: fonts.px_to_vw(60, 2);
+  }
+}
+
+.develop-tools-title {
+  color: black;
+  @include fonts.family-Saira-Medium;
+  font-size: fonts.px_to_vw(28);
+  margin-top: fonts.px_to_vw(20);
+  text-align: center;
+
+  @include var.adapted-content-mobile {
+    font-size: fonts.px_to_vw(20, 2);
+    margin-top: fonts.px_to_vw(12, 2);
+  }
+}
+
+.develop-tools-logo svg {
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.3);
+  }
+}

@@ -21,6 +21,8 @@ import xamarin from "thesvg/xamarin";
 import owasp from "thesvg/owasp";
 import claude_code from "thesvg/claude-code";
 import opencode from "thesvg/opencode";
+import docker from "thesvg/docker";
+import dart from "thesvg/dart";
 
 // 1. Entornos de Desarrollo
 const develop_tools = [
@@ -34,7 +36,7 @@ const develop_tools = [
 const database_tools = [
     { logo: mongodb, title: 'MongoDB' },
     { logo: firebase, title: 'Firebase' },
-    { logo: mysql, title: 'MySQL', variant: 'mono' },
+    // { logo: mysql, title: 'MySQL', variant: 'mono' },
     { logo: azure_sql_server, title: 'SQL Server' }, 
     { logo: prisma, title: 'Prisma Studio', variant: 'mono' }, 
 ];
@@ -52,6 +54,7 @@ const mobile_tools = [
     { logo: reactnative, title: 'React Native' },
     { logo: xamarin, title: 'Xamarin' }, 
     { logo: flutter, title: 'Flutter' },
+    { logo: dart, title: 'Dart' },
 ];
 
 // 5. Herramientas Generales, Infraestructura y Diseño
@@ -63,6 +66,7 @@ const general_tools = [
     { logo: figma, title: 'Figma' },
     { logo: hetzner, title: 'Hetzner' },
     { logo: cloudflare, title: 'Cloudflare' },
+    { logo: docker, title: 'Docker' }
 ];
 
 export const skills_data = {

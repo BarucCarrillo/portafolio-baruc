@@ -11,13 +11,13 @@ interface DevelopmentSectionProps {
 export const DevelopmentSection = ({url, img, title, description}: DevelopmentSectionProps) => {
     return(
         <div className='development-section'>
-            <Animator className="img-project" delay={2}>
+            <Animator className="img-project" animation='slideRight' delay={3} duration={1}>
                 <img src={img} alt="" />
             </Animator>
-            <div className="info-project">
+            <Animator className="info-project" animation='slideUp' delay={3} duration={1}>
                 <h2><a href={url} target='blank'>{title}</a></h2>
                 <p>{description}</p>
-            </div>
+            </Animator>
         </div>
     )
 }

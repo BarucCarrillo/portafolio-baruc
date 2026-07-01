@@ -8,12 +8,28 @@
       color: black;
       text-align: center;
       @include fonts.family-Saira-Bold;
-      font-size: fonts.px_to_vw(64);
+      font-size: fonts.px_to_vw(40);
       margin-top: fonts.px_to_vw(30);
+
+      @include var.adapted-content-mobile {
+        font-size: fonts.px_to_vw(22, 2);
+        margin-top: fonts.px_to_vw(12, 2);
+      }
     }
   }
-  .development-container{
+  .development-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: fonts.px_to_vw(50);
+    .development-title {
+      @include fonts.family-Saira-Bold;
+      font-size: fonts.px_to_vw(40);
+      color: black;
+      text-align: center;
+
+      @include var.adapted-content-mobile {
+        font-size: fonts.px_to_vw(22, 2);
+      }
+    }
   }
 }
