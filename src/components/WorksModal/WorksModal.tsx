@@ -8,7 +8,8 @@ import "./WorksModal.scss";
 const projectsList = [
   projects.barre,
   projects.dosam,
-  projects.oftalia
+  projects.oftalia,
+  projects.ga
 ];
 
 export const WorksModal = () => {

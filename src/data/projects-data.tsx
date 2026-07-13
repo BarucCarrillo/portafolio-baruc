@@ -20,8 +20,16 @@ const oftalia = {
     description: 'dosam'
 }
 
+const ga = {
+    url: 'https://ganandoamigos.xyz/',
+    img: 'https://placehold.co/200',
+    title: 'Ganando Amigos',
+    description: 'dosam'
+}
+
 export const projects = {
     barre,
     dosam,
-    oftalia
+    oftalia,
+    ga
 }
