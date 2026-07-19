@@ -4,6 +4,7 @@ import { folder_icon } from '../../data/img-data';
 import './index.scss'
 import { ProfileModal } from '../../components/ProfileModal/ProfileModal';
 import { WorksModal } from '../../components/WorksModal/WorksModal';
+import { ResumeSelector } from '../../components/ResumeSelector/ResumeSelector';
 
 export const Index = () => {
 
@@ -89,9 +90,7 @@ export const Index = () => {
                 onClose={() => setIsOpenResume(false)}
                 title='C:\BARUC\resume'
                 children={
-                    <>
-                        <h1>hola</h1>
-                    </>
+                    <ResumeSelector />
                 }
             />
         </section>
