@@ -5,25 +5,28 @@
 .development-section {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: fonts.px-to-vw(400);
-  margin: fonts.px-to-vw(40) auto 0 auto;
-  gap: fonts.px-to-vw(40);
+  justify-content: center;
+  padding: fonts.px-to-vw(100) 0;
+  gap: fonts.px-to-vw(80); 
 
   @include var.adapted-content-mobile {
     flex-direction: column;
-    max-width: fonts.px-to-vw(500, 2);
-    margin-top: fonts.px-to-vw(20, 2);
-    gap: fonts.px-to-vw(20, 2);
+    max-width: 100%;
+    margin-top: fonts.px-to-vw(30, 2);
+    gap: fonts.px-to-vw(24, 2);
   }
 
   .img-project {
-    flex-shrink: 0;
+    flex: 0 0 fonts.px-to-vw(200); 
+    max-width: fonts.px-to-vw(200); 
 
     img {
-      border-radius: fonts.px-to-vw(60);
+      border-radius: fonts.px-to-vw(40);
       display: block;
       width: 100%;
+      height: auto;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
 
       @include var.adapted-content-mobile {
         border-radius: fonts.px-to-vw(30, 2);
@@ -36,32 +39,48 @@
   .info-project {
     color: black;
     text-align: left;
+    min-width: 0;
+    max-width: fonts.px-to-vw(700);
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: fonts.px-to-vw(16); 
 
     @include var.adapted-content-mobile {
       text-align: center;
+      align-items: center;
     }
 
     h2 {
       @include fonts.family-Saira-Bold;
-      letter-spacing: fonts.px-to-vw(2);
+      letter-spacing: fonts.px-to-vw(1.5);
       font-size: fonts.px_to_vw(32);
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s ease-in-out;
+      margin: 0; 
 
       @include var.adapted-content-mobile {
-        font-size: fonts.px_to_vw(20, 2);
-        letter-spacing: fonts.px-to-vw(2, 2);
+        font-size: fonts.px_to_vw(22, 2);
+        letter-spacing: fonts.px-to-vw(1.5, 2);
       }
 
-      &:hover {
-        cursor: pointer;
-        border-bottom-color: black;
+      a {
+        text-decoration: none; 
+        color: inherit;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          border-bottom-color: black;
+        }
       }
     }
 
     p {
       @include fonts.family-Saira-Medium;
-      font-size: fonts.px_to_vw(32);
+      font-size: fonts.px_to_vw(20);
+      line-height: 1.6; 
+      color: #333; 
+      width: 100%; 
       margin: 0;
 
       @include var.adapted-content-mobile {
