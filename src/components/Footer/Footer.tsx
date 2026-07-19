@@ -1,4 +1,4 @@
-import { email_icon, github_icon, linkedin_icon, phone_icon } from '../../data/img-data';
+import { email_icon, github_icon, linkedin_icon } from '../../data/img-data';
 import './footer.scss';
 
 export const Footer = () => {
@@ -15,13 +15,13 @@ export const Footer = () => {
                     <img src={linkedin_icon.url} alt={linkedin_icon.alt} />
                 </a>
 
-                <a
+                {/* <a
                     href="tel:+123456789"
                     className="footer-link"
                     aria-label="Llamar por teléfono"
                 >
                     <img src={phone_icon.url} alt={phone_icon.alt} />
-                </a>
+                </a> */}
 
                 <a
                     href="https://github.com/BarucCarrillo"

@@ -27,7 +27,7 @@ export const ResumeSelector = () => {
                         <div className="tab-panel">
                             <div className="pdf-container">
                                 <iframe
-                                    src="/assets/r_1.pdf#navpanes=0"
+                                    src="/assets/r_1.pdf#navpanes=0&view=FitH"
                                     title="CV English"
                                     className="pdf-viewer"
                                 />
@@ -43,7 +43,7 @@ export const ResumeSelector = () => {
                         <div className="tab-panel">
                             <div className="pdf-container">
                                 <iframe
-                                    src="/assets/r_2.pdf#navpanes=0"
+                                    src="/assets/r_2.pdf#navpanes=0&view=FitH"
                                     title="CV Spanish"
                                     className="pdf-viewer"
                                 />
